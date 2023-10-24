@@ -1,0 +1,504 @@
+BUS_COMPANY_TABLE CREATION
+db.createCollection(“buscompany”)
+
+BUS_COMPANY_TABLE_DATA_INSERT
+db.buscompany.insertMany(
+  {
+    "_id": "UKBCXC18",
+    "name": "Excelsior Coaches",
+    "address": "13 Salisbury Road, Blandford",
+    "phone_no": 01258457101,
+    "email": "info@excelsiorcoaches.com",
+    "website": "www.excelsiorcoaches.com",
+    "buses": ["BCXC01", "BCXC02"]
+  },
+  {
+    "_id": "UKBCJB14",
+    "name": "Jolly Bus",
+    "address": "118 Whitmore Way, Basildon",
+    "phone_no": 01268288839,
+    "email": "info@jollybus.co.uk",
+    "website": "www.jollybus.co.uk",
+    "buses": ["BCJB01", "BCJB02", "BCJB03"]
+  },
+  {
+    "_id": "UKBCMC17",
+    "name": "Moors Coaches",
+    "address": "6 Hereford Way, Middlewich",
+    "phone_no": 01606836733,,
+    "email": "info@moorscoaches.com",
+    "website": "www.moorscoaches.com",
+    "buses":["BCMC01", "BCMC02"]
+  },
+  {
+    "_id": "UKBCOC15",
+    "name": "Oban Bus",
+    "address": "Urban Bus Station, Abingdon, Didcot",
+    "phone_no": 01865785400,
+    "email": "info@obanbus.co.uk",
+    "website": "www.obanbus.co.uk",
+    "buses": ["BCOC01", "BCOC02"]
+  },
+  {
+    "_id": "UKBCSC16",
+    "name": "Selkent Coaches",
+    "address": "West Ham Garage, 81 Stephenson Street",
+    "phone_no": 03452418000,
+    "email": "info@selkentcoaches.co.uk",
+    "website": "www.selkent.co.uk",
+    "buses": ["BCSC01"]
+  }
+);
+
+
+
+
+BUS_STOP TABLE CREATION
+db.createCollection(“busstop”)
+
+BUS_STOP_TABLE_INSERT_DATA_QUERIES
+db.busstop.insertMany(
+  {
+    _id: "RTCES01",
+    type: "Bus Station",
+    address: "Aldi, Wekinson Road",
+    coordinates: "34092, 18574",
+    name: "Welkinson"
+  },
+  {
+    _id: "RTCES02",
+    type: "Box Marked",
+    address: "Mcdonalds, Ojodu Avenue",
+    coordinates: "61345, 87930",
+    name: "Ojodu"
+  },
+  {
+    _id: "RTCES03",
+    type: "Shelters",
+    address: "Esso Oil, Toll Gate Layby",
+    coordinates: "42578, 12960",
+    name: "Toll-Gate"
+  },
+  {
+    _id: "RTCES04",
+    type: "Simple Signed",
+    address: "Co-op, Ogba Road",
+    coordinates: "54916, 85610",
+    name: "Ogba"
+  },
+  {
+    _id: "RTCES05",
+    type: "Shelters",
+    address: "Mr Biggs, Allen Avenue",
+    coordinates: "98621, 27549",
+    name: "Allen"
+  },
+  {
+    _id: "RTCES06",
+    type: "Box Marked",
+    address: "Trailer Park, Trans Amadi Road",
+    coordinates: "75104, 40926",
+    name: "Trans Amadi"
+  },
+  {
+    _id: "RTCES07",
+    type: "Shelters",
+    address: "Mechanic Village, Peter Odili Road",
+    coordinates: "52319, 64785",
+    name: "Peter-Odili"
+  },
+  {
+    _id: "RTCES08",
+    type: "Box Marked",
+    address: "Kada Plaza, Sapele Road",
+    coordinates: "21570, 79362",
+    name: "Sapele Road"
+  },
+  {
+    _id: "RTCES09",
+    type: "Box Marked",
+    address: "Prison, Airport Road",
+    coordinates: "96047, 30758",
+    name: "Airport Road"
+  },
+  {
+    _id: "RTCES10",
+    type: "Simple Signed",
+    address: "The Garage, Ring Road",
+    coordinates: "68230, 97256",
+    name: "Ring-road"
+  },
+  {
+    _id: "RTCES11",
+    type: "Shelters",
+    address: "Esohe Inn, Upper Road",
+    coordinates: "39816, 56820",
+    name: "Upper Road"
+  },
+  {
+    _id: "RTCES12",
+    type: "Simple Signed",
+    address: "Holdenhurst, Asda-George",
+    coordinates: "87246, 62503",
+    name: "Asda-George"
+  },
+  {
+    _id: "RTCES13",
+    type: "Simple Signed",
+    address: "Spar, Wallidown Road",
+    coordinates: "15608, 42137",
+    name: "Wallisdown"
+  },
+  {
+    _id: "RTCES14",
+    type: "Shelters",
+    address: "the Dentist, Alder Road",
+    coordinates: "53609, 75203",
+    name: "Alder Road"
+  },
+  {
+    _id: "RTCES15",
+    type: "Box Marked",
+    address: "Tarvener, Talbot Avenue",
+    coordinates: "24895, 93670",
+    name: "Talbot Avenue"
+  },
+  {
+    _id: "RTCES16",
+    type: "Box Marked",
+    address: "Post Office, George Town Layby",
+    coordinates: "74568, 56320",
+    name: "George Town"
+  },
+  {
+    _id: "RTCES17",
+    type: "Box Marked",
+    address: "Sainsbury, Quay Road",
+    coordinates: "36740, 18062",
+    name: "Quay Road"
+  },
+  {
+    _id: "RTCES18",
+    type: "Shelters",
+    address: "Colborne Close",
+    coordinates: "91872, 23846",
+    name: "Colborne"
+  },
+  {
+    _id: "RTCES19",
+    type: "Box Marked",
+    address: "Baiter Park Close",
+    coordinates: "65027, 40931",
+    name: "Baier Park"
+  },
+  {
+    _id: "RTCES20",
+    type: "Bus Station",
+    address: "The Whale Plaza, Penn Cinema Cross",
+    coordinates: "32740, 97456",
+    name: "Penn Cinema"
+  }
+);
+
+
+
+
+BUS_TABLE_CREATION
+db.createCollection(“bus”)
+
+BUS_INSERT_DATA
+db.bus.insertMany(  {    _id: "BCXC01",    mileage: 37290.00,    model: "RARITIES",    years: 2010,    company_id: "UKBCXC18"  },  {    _id: "BCXC02",    mileage: 17791.00,    model: "MOLUE",    years: 1998,    company_id: "UKBCXC18"  },  {    _id: "BCJB01",    mileage: 66345.00,    model: "BRT",    years: 2002,    company_id: "UKBCMC14"  },  {    _id: "BCJB02",    mileage: 24205.00,    model: "COSTER",    years: 2015,    company_id: "UKBCMC14"  },  {    _id: "BCJB03",    mileage: 57765.00,    model: "RARITIES",    years: 2010,    company_id: "UKBCMC14"  },  {    _id: "BCMC01",    mileage: 142766.00,    model: "RARITIES",    years: 2010,    company_id: "UKBCMC17"  },  {    _id: "BCMC02",    mileage: 134656.00,    model: "BRT",    years: 2002,    company_id: "UKBCMC17"  },  {    _id: "BCOC01",    mileage: 38102.00,    model: "RARITIES",    years: 2010,    company_id: "UKBCOC15"  },  {    _id: "BCOC02",    mileage: 111338.00,    model: "BRT",    years: 2002,    company_id: "UKBCOC15"  },  {    _id: "BCSC01",    mileage: 131558.00,    model: "RARITIES",    years: 2010,    company_id: "UKBCSC16"  });
+
+
+ROUTES_TABLE_CREATION
+db.createCollection(“route”)
+
+ROUTES_TABLE_INSERT_DATA
+db.route.insertMany(  {    _id: "RTUKBC01",    name: "Route 13",    length: 4,    startstopid: "RTCES01",    endstopid: "RTCES05",    company_id: "UKBCXC18"  },  {    _id: "RTUKBC02",    name: "Route 17",    length: 4,    startstopid: "RTCES01",    endstopid: "RTCES07",    company_id: "UKBCJB14"  },  {    _id: "RTUKBC03",    name: "Route 23",    length: 5,    startstopid: "RTCES01",    endstopid: "RTCES12",    company_id: "UKBCMC17"  },  {    _id: "RTUKBC04",    name: "Route 25",    length: 5,    startstopid: "RTCES01",    endstopid: "RTCES14",    company_id: "UKBCOC15"  },  {    _id: "RTUKBC05",    name: "Route 30",    length: 4,    startstopid: "RTCES01",    endstopid: "RTCES18",    company_id: "UKBCSC16"  },  {    _id: "RTUKBC06",    name: "Route 8",    length: 5,    startstopid: "RTCES01",    endstopid: "RTCES03",    company_id: "UKBCJB14"  },  {    _id: "RTUKBC07",    name: "Route 12",    length: 3,    startstopid: "RTCES01",    endstopid: "RTCES10",    company_id: "UKBCXC18"  },  {    _id: "RTUKBC08",    name: "Route 16",    length: 3,    startstopid: "RTCES01",    endstopid: "RTCES20",    company_id: "UKBCOC15"  },  {    _id: "RTUKBC09",    name: "Route 20",    length: 5,    startstopid: "RTCES01",    endstopid: "RTCES10",    company_id: "UKBCMC17"  },  {    _id: "RTUKBC10",    name: "Route 15",    length: 4,    startstopid: "RTCES01",    endstopid: "RTCES20",    company_id: "UKBCJB14"  });
+
+
+
+
+SERVICE_TABLE_CREATION
+db.createCollection(“service”)
+
+SERVICE_TABLE_INSERT_DATA
+
+Here are the insert queries for the mongodb many-to-many "service" collection:
+db.service.insertMany([
+  { _id: "SRV001", service_date: new Date("2021-01-23"), route_id: "RTUKBC01", busno_id: "BCXC01" },
+  { _id: "SRV002", service_date: new Date("2021-08-20"), route_id: "RTUKBC02", busno_id: "BCJB01" },
+  { _id: "SRV003", service_date: new Date("2021-08-23"), route_id: "RTUKBC01", busno_id: "BCXC02" },
+  { _id: "SRV004", service_date: new Date("2021-09-01"), route_id: "RTUKBC05", busno_id: "BCSC01" },
+  { _id: "SRV005", service_date: new Date("2021-09-01"), route_id: "RTUKBC03", busno_id: "BCMC01" },
+  { _id: "SRV006", service_date: new Date("2021-09-01"), route_id: "RTUKBC05", busno_id: "BCSC01" },
+  { _id: "SRV007", service_date: new Date("2021-09-07"), route_id: "RTUKBC02", busno_id: "BCJB01" },
+  { _id: "SRV008", service_date: new Date("2021-09-08"), route_id: "RTUKBC07", busno_id: "BCXC02" },
+  { _id: "SRV009", service_date: new Date("2021-09-18"), route_id: "RTUKBC05", busno_id: "BCSC01" },
+  { _id: "SRV010", service_date: new Date("2021-09-19"), route_id: "RTUKBC07", busno_id: "BCXC02" },
+{ _id: "SRV011", service_date: new Date("2021-09-19"), route_id: "RTUKBC08", busno_id: "BCOC02" },
+  { _id: "SRV012", service_date: new Date("2021-09-30"), route_id: "RTUKBC02", busno_id: "BCOC01" },
+  { _id: "SRV013", service_date: new Date("2021-12-31"), route_id: "RTUKBC06", busno_id: "BCJB02" },
+  { _id: "SRV014", service_date: new Date("2022-01-04"), route_id: "RTUKBC08", busno_id: "BCOC02" },
+  { _id: "SRV015", service_date: new Date("2022-01-04"), route_id: "RTUKBC07", busno_id: "BCXC01" },
+  { _id: "SRV016", service_date: new Date("2022-01-04"), route_id: "RTUKBC02", busno_id: "BCJB01" },
+  { _id: "SRV017", service_date: new Date("2022-01-04"), route_id: "RTUKBC02", busno_id: "BCJB01" },
+
+  { _id: "SRV018", service_date: new Date("2022-01-04"), route_id: "RTUKBC10", busno_id: "BCJB03" },
+  { _id: "SRV019", service_date: new Date("2022-01-06"), route_id: "RTUKBC07", busno_id: "BCXC01" },
+  { _id: "SRV020", service_date: new Date("2022-03-11"), route_id: "RTUKBC09", busno_id: "BCMC02" },
+  { _id: "SRV021", service_date: new Date("2022-03-12"), route_id: "RTUKBC07", busno_id: "BCXC02" },
+  { _id: "SRV022", service_date: new Date("2022-03-12"), route_id: "RTUKBC05", busno_id: "BCSC01" },
+  { _id: "SRV023", service_date: new Date("2022-03-14"), route_id: "RTUKBC10", busno_id: "BCJB03" },
+ { _id: "SRV024", service_date: new Date("2022-06-05"), route_id: "RTUKBC07", busno_id: "BCXC02" },
+  { _id: "SRV025", service_date: new Date("2023-03-07"), route_id: "RTUKBC05", busno_id: "BCSC01" },
+  { _id: "SRV026", service_date: new Date("2022-07-05"), route_id: "RTUKBC04", busno_id: "BCOC01" },
+  { _id: "SRV027", service_date: new Date("2023-03-04"), route_id: "RTUKBC09", busno_id: "BCMC02" },
+  { _id: "SRV028", service_date: new Date("2023-03-06"), route_id: "RTUKBC03", busno_id: "BCMC01" },
+  { _id: "SRV029", service_date: new Date("2023-03-07"), route_id: "RTUKBC04", busno_id: "BCOC01" },
+  { _id: "SRV030", service_date: new Date("2023-03-09"), route_id: "RTUKBC04", busno_id: "BCOC01" },
+  { _id: "SRV031", service_date: new Date("2023-03-13"), route_id: "RTUKBC05", busno_id: "BCSC01" },
+  { _id: "SRV032", service_date: new Date("2023-03-13"), route_id: "RTUKBC05", busno_id: "BCSC01" },
+  { _id: "SRV033", service_date: new Date("2023-03-14"), route_id: "RTUKBC03", busno_id: "BCMC01" },
+  { _id: "SRV034", service_date: new Date("2023-03-17"), route_id: "RTUKBC08", busno_id: "BCOC02" },
+  { _id: "SRV035", service_date: new Date("2023-03-18"), route_id: "RTUKBC10", busno_id: "BCJB03" },
+  { _id: "SRV036", service_date: new Date("2023-03-18"), route_id: "RTUKBC05", busno_id: "BCSC01" },
+  { _id: "SRV037", service_date: new Date("2023-03-19"), route_id: "RTUKBC05", busno_id: "BCSC01" },
+  { _id: "SRV038", service_date: new Date("2023-03-19"), route_id: "RTUKBC04", busno_id: "BCOC01" },
+  { _id: "SRV039", service_date: new Date("2023-03-19"), route_id: "RTUKBC06", busno_id: "BCJB02" },
+  { _id: "SRV040", service_date: new Date("2023-03-20"), route_id: "RTUKBC10", busno_id: "BCJB03" },
+ { _id: "SRV041", service_date: new Date("2023-03-20"), route_id: "RTUKBC08", busno_id: "BCOC02" },
+  { _id: "SRV042", service_date: new Date("2023-03-22"), route_id: "RTUKBC05", busno_id: "BCSC01" },
+  { _id: "SRV043", service_date: new Date("2023-03-24"), route_id: "RTUKBC05", busno_id: "BCSC01" },
+  { _id: "SRV044", service_date: new Date("2023-04-06"), route_id: "RTUKBC06", busno_id: "BCJB02" },
+  { _id: "SRV045", service_date: new Date("2023-04-06"), route_id: "RTUKBC07", busno_id: "BCXC02" },
+  { _id: "SRV046", service_date: new Date("2023-04-06"), route_id: "RTUKBC07", busno_id: "BCXC02" },
+  { _id: "SRV047", service_date: new Date("2023-04-06"), route_id: "RTUKBC06", busno_id: "BCJB02" },
+  { _id: "SRV048", service_date: new Date("2023-04-06"), route_id: "RTUKBC06", busno_id: "BCJB02" },
+  { _id: "SRV049", service_date: new Date("2023-04-06"), route_id: "RTUKBC06", busno_id: "BCJB02" },
+  { _id: "SRV050", service_date: new Date("2023-04-07"), route_id: "RTUKBC08", busno_id: "BCOC02" }
+])
+
+
+
+
+db.createCollection("Passenger");
+
+db.Passenger.insertMany([
+  {
+    "_id": "PSNP01",
+    "discount_status": "child",
+    "phone_no": 3393884698,
+    "email": "myqge@example.com",
+    "name": "GEORGE STONE",
+    "regstatus": 100
+  },
+  {
+    "_id": "PSNP02",
+    "discount_status": "staff",
+    "phone_no": 5002327116,
+    "email": "vwrup@example.com",
+    "name": "SUZIE MALTOV",
+    "regstatus": 101
+  },
+  {
+    "_id": "PSNP03",
+    "discount_status": "student",
+    "phone_no": 8651611827,
+    "email": "jrgme@example.com",
+    "name": "BARRY WHITE",
+    "regstatus": 101
+  },
+  {
+    "_id": "PSNP04",
+    "discount_status": "child",
+    "phone_no": 8249732324,
+    "email": "jzhcb@example.com",
+    "name": "HARI RASTOGI",
+    "regstatus": 100
+  },
+  {
+    "_id": "PSNP05",
+    "discount_status": "student",
+    "phone_no": 1048288717,
+    "email": "bmknf@example.com",
+    "name": "HANNAH KENDRICK",
+    "regstatus": 100
+  },
+  {
+    "_id": "PSNP06",
+    "discount_status": "adult",
+    "phone_no": 6416676819,
+    "email": "aruyz@example.com",
+    "name": "BEYONCE CARTER",
+    "regstatus": 100
+  },
+  {
+    "_id": "PSNP07",
+    "discount_status": "student",
+    "phone_no": 6312321587,
+    "email": "ljxvj@example.com",
+    "name": "GADEBO VIVOR",
+    "regstatus": 100
+  },
+  {
+    "_id": "PSNP08",
+    "discount_status": "child",
+    "phone_no": 8347996787,
+    "email": "psjdt@example.com",
+    "name": "AMAKA OGAN",
+    "regstatus": 100
+  },
+  {
+    "_id": "PSNP09",
+    "discount_status": "adult",
+    "phone_no": 8778038593,
+    "email": "jjxlw@example.com",
+    "name": "AYRRA STARK",
+    "regstatus": 101
+  },
+  {
+    "_id": "PSNP10",
+    "discount_status": "student",
+    "phone_no": 4502610432,
+    "email": "ncedn@example.com",
+    "name": "JOHN WICK",
+    "regstatus": 101
+  }
+]);
+
+
+
+db.createCollection("ticket");
+
+db.ticket.insertMany([
+  {
+    "_id": "TCKTP01",
+    "price": 3.27,
+    "ticket_type": "Day Rider",
+    "purchase_date": new Date("2021-01-23"),
+    "passenger_no": "PSNP01",
+    "passenger_status": "child"
+  },
+  {
+    "_id": "TCKTP02",
+    "price": 105,
+    "ticket_type": "monthly",
+    "purchase_date": new Date("2021-08-20"),
+    "passenger_no": "PSNP02",
+    "passenger_status": "staff"
+  },
+  {
+    "_id": "TCKTP03",
+    "price": 2.5,
+    "ticket_type": "Return",
+    "purchase_date": new Date("2021-09-01"),
+    "passenger_no": "PSNP03",
+    "passenger_status": "student"
+  },
+  {
+    "_id": "TCKTP04",
+    "price": 98.1,
+    "ticket_type": "monthly",
+    "purchase_date": new Date("2021-09-07"),
+    "passenger_no": "PSNP04",
+    "passenger_status": "child"
+  },
+  {
+    "_id": "TCKTP05",
+    "price": 22.89,
+    "ticket_type": "Weekly",
+    "purchase_date": new Date("2021-12-31"),
+    "passenger_no": "PSNP05",
+    "passenger_status": "student"
+  },
+  {
+    "_id": "TCKTP06",
+    "price": 4.85,
+    "ticket_type": "Day Rider",
+    "purchase_date": new Date("2022-01-04"),
+    "passenger_no": "PSNP06",
+    "passenger_status": "adult"
+  },
+  {
+    "_id": "TCKTP07",
+    "price": 22.89,
+    "ticket_type": "Weekly",
+    "purchase_date": new Date("2022-03-11"),
+    "passenger_no": "PSNP07",
+    "passenger_status": "student"
+  },
+  {
+    "_id": "TCKTP08",
+    "price": 1.5,
+    "ticket_type": "Single",
+    "purchase_date": new Date("2022-03-12"),
+    "passenger_no": "PSNP08",
+    "passenger_status": "child"
+  },
+  {
+    "_id": "TCKTP09",
+    "price": 1770.25,
+    "ticket_type": "Yearly",
+    "purchase_date": new Date("2022-06-05"),
+    "passenger_no": "PSNP09",
+    "passenger_status": "adult"
+  },
+  {
+    "_id": "TCKTP10",
+    "price": 2,
+    "ticket_type": "Single",
+    "purchase_date": new Date("2022-06-07"),
+    "passenger_no": "PSNP10",
+    "passenger_status": "student"
+  },
+  {
+    "_id": "TCKTP11",
+    "price": 105,
+    "ticket_type": "Monthly",
+    "purchase_date": new Date("2023-03-07"),
+    "passenger_no": "PSNP03",
+    "passenger_status": "staff"
+  },
+  {
+    "_id": "TCKTP12",
+    "price": 98.1,
+    "ticket_type": "Monthly",
+    "purchase_date": new Date("2023-03-09"),
+    "passenger_no": "PSNP04",
+    "passenger_status": "child"
+  },
+  {
+    "_id": "TCKTP13",
+    "price": 22.89,
+    "ticket_type": "Weekly",
+    "purchase_date": new Date("2023-03-13"),
+    "passenger_no": "PSNP05",
+    "passenger_status": "student"
+  },
+  {
+    "_id": "TCKTP14",
+    "price": 22.89,
+    "ticket_type": "Weekly",
+    "purchase_date": new Date("2023-03-18"),
+    "passenger_no": "PSNP07",
+    "passenger_status": "student"
+  },
+  {
+    "_id": "TCKTP15",
+    "price": 1.5,
+    "ticket_type": "Single",
+    "purchase_date": new Date("2023-03-20"),
+    "passenger_no": "PSNP08",
+    "passenger_status": "child"
+  },
+  {
+    "_id": "TCKTP16",
+    "price": 2.5,
+    "ticket_type": "Return",
+    "purchase_date": new Date("2023-04-06"),
+    "passenger_no": "PSNP10",
+    "passenger_status": "student"
+  }
+]);
+

@@ -1,0 +1,133 @@
+MONGO DB QUERIES
+1. --- QUERY TO SHOW YOU SPECIFIC INFORMATION OF A ROUTE SERVICED BY A BUS FROM THE SERVICE COLLECTION.
+db.service.aggregate([
+  {
+    $match: { busno_id: "BCOC01" }
+  },
+  {
+    $lookup: {
+      from: "route",
+      localField: "route_id",
+      foreignField: "_id",
+      as: "route"
+    }
+  },
+  {
+    $unwind: "$route"
+  },
+  {
+    $project: {
+      _id: 0,
+      service_id: "$_id",
+      service_date: 1,
+      busno_id: 1,
+      route_name: "$route.name"
+    }
+  }
+]);
+
+2. --- QUERY TO SHOW YOU ALL THE INFORMATION OF THE ROUTE SERVICED BY A BUS FROM THE SERVICE COLLECTION.
+db.service.aggregate([
+  {
+    $match: { busno_id: "BCOC01" }
+  },
+  {
+    $lookup: {
+      from: "route",
+      localField: "route_id",
+      foreignField: "_id",
+      as: "route"
+    }
+  },
+  {
+    $unwind: "$route"
+  }
+]);
+
+3. __ QUERY TO FIND ALL THE BUSES OWNED BY ONE COMPANY
+db.bus.find({ "company_id": "UKBCXC18" });
+
+
+4. _QUERY TO SHOW THE COUNT OF A PARTICULAR TYPE OF TICKETS IN THE TICKET COLLECTION
+db.tickets.count({
+  "ticket_type": "Return"
+})
+
+5. _QUERY TO SHOW ALL THE PASSENGERS WITH "RETURN" TICKET USING THE PASSENGER _NO REFERENCE LINK FROM THE TICKET COLLECTION
+db.ticket.aggregate([
+  {
+    $match: { ticket_type: "Return" }
+  },
+  {
+    $lookup: {
+      from: "Passenger",
+      localField: "passenger_no",
+      foreignField: "_id",
+      as: "passenger"
+    }
+  },
+  {
+    $unwind: "$passenger"
+  },
+  {
+    $project: {
+      _id: 0,
+      passenger_no: 1,
+      passenger_name: "$passenger.name",
+      ticket_type: 1
+    }
+  }
+]);
+
+6. _QUERY TO UPDATE  2 DOCUMENTS IN THE PASSENGER COLLECTION
+db.passenger.updateOne(
+  { _id: "PSNP03" },
+  {
+    $set: {
+      discount_status: "adult",
+      phone_no: 1234567890,
+      email: "george.stone@example.com",
+      name: "George Stone",
+      regstatus: 101
+    }
+  }
+);
+
+db.passenger.updateOne(
+  { _id: "PSNP06" },
+  {
+    $set: {
+      discount_status: "child",
+      phone_no: 2345678901,
+      email: "suzie.maltov@example.com",
+      name: "Suzie Maltov",
+      regstatus: 100
+    }
+  }
+);
+7. QUERY TO UPDATE 2 DOCUMENTS IN THE TICKET COLLECTION.
+db.ticket.updateOne(
+  { _id: "TCKTP01" },
+  {
+    $set: {
+      price: 4.5,
+      ticket_type: "Weekly",
+      purchase_date: new Date("2023-05-01"),
+      passenger_no: "PSNP03",
+      passenger_status: "student"
+    }
+  }
+);
+
+db.ticket.updateOne(
+  { _id: "TCKTP02" },
+  {
+    $set: {
+      price: 120,
+      ticket_type: "Yearly",
+      purchase_date: new Date("2023-06-01"),
+      passenger_no: "PSNP04",
+      passenger_status: "child"
+    }
+  }
+);
