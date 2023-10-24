@@ -1,7 +1,8 @@
-BUS_COMPANY_TABLE CREATION
-db.createCollection(“buscompany”)
 
-BUS_COMPANY_TABLE_DATA_INSERT
+// BUS COMPANY COLLECTION CREATION
+db.createCollection("buscompany")
+
+// BUS_COMPANY_TABLE_DATA_INSERT
 db.buscompany.insertMany(
   {
     "_id": "UKBCXC18",
@@ -53,10 +54,10 @@ db.buscompany.insertMany(
 
 
 
-BUS_STOP TABLE CREATION
-db.createCollection(“busstop”)
+// BUS_STOP TABLE CREATION
+db.createCollection("busstop")
 
-BUS_STOP_TABLE_INSERT_DATA_QUERIES
+// BUS_STOP_TABLE_INSERT_DATA_QUERIES
 db.busstop.insertMany(
   {
     _id: "RTCES01",
@@ -203,26 +204,26 @@ db.busstop.insertMany(
 
 
 
-BUS_TABLE_CREATION
-db.createCollection(“bus”)
+// BUS_TABLE_CREATION
+db.createCollection("bus")
 
-BUS_INSERT_DATA
+// BUS_INSERT_DATA
 db.bus.insertMany(  {    _id: "BCXC01",    mileage: 37290.00,    model: "RARITIES",    years: 2010,    company_id: "UKBCXC18"  },  {    _id: "BCXC02",    mileage: 17791.00,    model: "MOLUE",    years: 1998,    company_id: "UKBCXC18"  },  {    _id: "BCJB01",    mileage: 66345.00,    model: "BRT",    years: 2002,    company_id: "UKBCMC14"  },  {    _id: "BCJB02",    mileage: 24205.00,    model: "COSTER",    years: 2015,    company_id: "UKBCMC14"  },  {    _id: "BCJB03",    mileage: 57765.00,    model: "RARITIES",    years: 2010,    company_id: "UKBCMC14"  },  {    _id: "BCMC01",    mileage: 142766.00,    model: "RARITIES",    years: 2010,    company_id: "UKBCMC17"  },  {    _id: "BCMC02",    mileage: 134656.00,    model: "BRT",    years: 2002,    company_id: "UKBCMC17"  },  {    _id: "BCOC01",    mileage: 38102.00,    model: "RARITIES",    years: 2010,    company_id: "UKBCOC15"  },  {    _id: "BCOC02",    mileage: 111338.00,    model: "BRT",    years: 2002,    company_id: "UKBCOC15"  },  {    _id: "BCSC01",    mileage: 131558.00,    model: "RARITIES",    years: 2010,    company_id: "UKBCSC16"  });
 
 
-ROUTES_TABLE_CREATION
-db.createCollection(“route”)
+// ROUTES_TABLE_CREATION
+db.createCollection("route")
 
-ROUTES_TABLE_INSERT_DATA
+// ROUTES_TABLE_INSERT_DATA
 db.route.insertMany(  {    _id: "RTUKBC01",    name: "Route 13",    length: 4,    startstopid: "RTCES01",    endstopid: "RTCES05",    company_id: "UKBCXC18"  },  {    _id: "RTUKBC02",    name: "Route 17",    length: 4,    startstopid: "RTCES01",    endstopid: "RTCES07",    company_id: "UKBCJB14"  },  {    _id: "RTUKBC03",    name: "Route 23",    length: 5,    startstopid: "RTCES01",    endstopid: "RTCES12",    company_id: "UKBCMC17"  },  {    _id: "RTUKBC04",    name: "Route 25",    length: 5,    startstopid: "RTCES01",    endstopid: "RTCES14",    company_id: "UKBCOC15"  },  {    _id: "RTUKBC05",    name: "Route 30",    length: 4,    startstopid: "RTCES01",    endstopid: "RTCES18",    company_id: "UKBCSC16"  },  {    _id: "RTUKBC06",    name: "Route 8",    length: 5,    startstopid: "RTCES01",    endstopid: "RTCES03",    company_id: "UKBCJB14"  },  {    _id: "RTUKBC07",    name: "Route 12",    length: 3,    startstopid: "RTCES01",    endstopid: "RTCES10",    company_id: "UKBCXC18"  },  {    _id: "RTUKBC08",    name: "Route 16",    length: 3,    startstopid: "RTCES01",    endstopid: "RTCES20",    company_id: "UKBCOC15"  },  {    _id: "RTUKBC09",    name: "Route 20",    length: 5,    startstopid: "RTCES01",    endstopid: "RTCES10",    company_id: "UKBCMC17"  },  {    _id: "RTUKBC10",    name: "Route 15",    length: 4,    startstopid: "RTCES01",    endstopid: "RTCES20",    company_id: "UKBCJB14"  });
 
 
 
 
-SERVICE_TABLE_CREATION
-db.createCollection(“service”)
+// SERVICE_TABLE_CREATION
+db.createCollection("service")
 
-SERVICE_TABLE_INSERT_DATA
+// SERVICE_TABLE_INSERT_DATA
 
 Here are the insert queries for the mongodb many-to-many "service" collection:
 db.service.insertMany([
